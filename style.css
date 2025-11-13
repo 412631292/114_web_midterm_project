@@ -1,0 +1,27 @@
+:root{
+  --primary: #0d6efd;
+  --bg: #ffffff;
+  --text: #212529;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* 小動畫 */
+.activity-card {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* 深色模式切換 (加分) */
+.dark {
+  --bg: #121212;
+  --text: #e6e6e6;
+  --primary: #4ea8ff;
+}
