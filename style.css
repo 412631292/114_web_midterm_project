@@ -1,27 +1,91 @@
-:root{
-  --primary: #0d6efd;
-  --bg: #ffffff;
-  --text: #212529;
+/* 設定中文字體 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Microsoft JhengHei', '微軟正黑體';
+    background-color: #f8f9fa;
 }
 
-body{
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+/* 確保披薩視覺容器是定位的參考點 */
+#pizza-visual-container {
+    position: relative;
+    /* RWD 處理: 最大寬度 */
+    max-width: 450px; 
+    margin: 0 auto;
+    padding: 0 !important; /* 移除內邊距，讓披薩圖可以撐滿 */
 }
 
-/* 小動畫 */
-.activity-card {
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-.activity-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+/* 讓基底圖成為定位的參考對象，且佔據容器大部分空間 */
+#pizza-base {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* 讓基底圖位於所有配料圖層之下 */
+    z-index: 1; 
+    position: relative; 
 }
 
-/* 深色模式切換 (加分) */
-.dark {
-  --bg: #121212;
-  --text: #e6e6e6;
-  --primary: #4ea8ff;
+/* 通用配料圖示樣式：絕對定位，確保在基底上 */
+.topping-icon {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5; /* 確保配料圖層疊在基底上方 */
+    opacity: 0.95;
+    /* 使用 filter 讓圖示看起來更真實或有光澤 (選用) */
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)); 
+}
+
+/* ------------------------------------------------ */
+/* 定義個別配料的樣式、圖片和位置 (關鍵的 DOM 視覺效果) */
+/* ------------------------------------------------ */
+
+/* 臘腸 (Pepperoni) */
+.topping-icon[data-img="pepperoni"] {
+    background-image: url('assets/images/pepperoni.png'); 
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+}
+
+/* 蘑菇 (Mushroom) */
+.topping-icon[data-img="mushroom"] {
+    background-image: url('assets/images/mushroom.png');
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+}
+
+/* 鳳梨 (Pineapple) */
+.topping-icon[data-img="pineapple"] {
+    background-image: url('assets/images/pineapple.png');
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+}
+
+/* 培根 (Bacon) */
+.topping-icon[data-img="bacon"] {
+    background-image: url('assets/images/bacon.png');
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+}
+
+/* 黑橄欖 (Olive) */
+.topping-icon[data-img="olive"] {
+    background-image: url('assets/images/olive.png');
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+}
+
+/* RWD 調整：在小螢幕時，選項和預覽區會堆疊，Bootstrap 已經處理大部分 */
+@media (max-width: 991.98px) {
+    #pizza-visual-container {
+        margin-top: 20px;
+    }
 }
