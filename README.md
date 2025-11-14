@@ -42,14 +42,6 @@
 * **GitHub Repository 連結：**
     `(https://github.com/412631292/114_web_midterm_project)`
 * **GitHub Pages 網址 (部署後連結)：**
-    `[https://github.com/412631292/114_web_midterm_project]`
+    `(https://github.com/412631292/114_web_midterm_project.git)`
 
 ---
-
-## 🖼️ 截圖 (Screenshots)
-
-* [請在這裡插入**至少四張**專案截圖的連結或預留位置，例如：]
-    * 
-    * 
-    * 
-    *
