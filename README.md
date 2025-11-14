@@ -40,9 +40,9 @@
 ## 🖥️ 專案展示 (Project Demo)
 
 * **GitHub Repository 連結：**
-    `[填寫此處：您的 GitHub 專案連結]`
+    `[填寫此處：[您的 GitHub 專案連結]](https://github.com/412631292/114_web_midterm_project)`
 * **GitHub Pages 網址 (部署後連結)：**
-    `[填寫此處：https://username.github.io/114_web_midterm_project]`
+    `[https://github.com/412631292/114_web_midterm_project]`
 
 ---
 
